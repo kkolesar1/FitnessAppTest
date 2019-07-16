@@ -9,131 +9,75 @@
     android:background="@color/backgroundColor">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="319dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/banner"
-        android:contentDescription="@string/fitness_tracker_banner" />
+        android:id="@+id/frontBanner"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/fitness_tracker_banner"/>
 
     <Spinner
         android:id="@+id/spinner"
-        android:spinnerStyle="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
-        android:layout_width="wrap_content"
+        style="@style/spinner_style"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintEnd_toEndOf="@+id/button0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/frontBanner"
+        app:layout_constraintWidth_percent="0.92" />
 
     <ImageButton
         android:id="@+id/button0"
-        android:background="@android:color/transparent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         android:src="@drawable/day1"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
         android:contentDescription="@string/day_1_button" />
 
     <ImageButton
         android:id="@+id/button1"
-        android:background="@android:color/transparent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         android:src="@drawable/day2"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button0"
         android:contentDescription="@string/day_2_button" />
 
     <ImageButton
         android:id="@+id/button2"
-        android:background="@android:color/transparent"
         android:src="@drawable/day3"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         app:layout_constraintTop_toBottomOf="@+id/button1"
         android:contentDescription="@string/day_3_button" />
 
     <ImageButton
         android:id="@+id/button3"
-        android:background="@android:color/transparent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         android:src="@drawable/day4"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         android:contentDescription="@string/day_4_button" />
 
     <ImageButton
         android:id="@+id/button4"
-        android:background="@android:color/transparent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         android:src="@drawable/day5"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         android:contentDescription="@string/day_5_button" />
 
     <ImageButton
         android:id="@+id/button5"
-        android:background="@android:color/transparent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         android:src="@drawable/day6"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         android:contentDescription="@string/day_6_button" />
 
     <ImageButton
         android:id="@+id/button6"
-        android:background="@android:color/transparent"
+        style="@style/banner_style"
+        tools:ignore="MissingConstraints"
         android:src="@drawable/day7"
-        android:scaleType="fitXY"
-        android:layout_marginTop="10dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.92"
-        app:layout_constraintHeight_percent="0.095"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5"
         android:contentDescription="@string/day_7_button" />
 

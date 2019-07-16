@@ -2,12 +2,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <item><layer-list>
     <item><shape>
-        <solid android:color="@android:color/white" />
+        <solid android:color="@android:color/transparent" />
         <corners android:radius="8dp"/>
-        <padding android:left="8dp"/>
     </shape></item>
     <item><bitmap android:gravity="left"
-    android:src="@drawable/ic_arrow_drop_down"/>
+    android:src="@drawable/ic_arrow_drop_down" />
     </item>
 </layer-list></item>
 

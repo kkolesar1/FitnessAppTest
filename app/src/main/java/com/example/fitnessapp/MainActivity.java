@@ -1,17 +1,22 @@
 package com.example.fitnessapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
-    int[] weekImages;
-    String[] weeks;
-    Spinner mSpinner;
+    int[][][] weight; // hold the weights for each exercise on each day [week][day][exercise]
+    private int[] weekImages;
+    private String[] weeks;
+    private Spinner mSpinner;
+    private ImageButton imageButton;
     private boolean isUserInteracting;
 
     @Override
@@ -39,6 +44,22 @@ public class MainActivity extends AppCompatActivity{
 
             }
         });
+
+        // loop through image buttons and set the listeners
+        for(int i = 0; i <weeks.length; i+=1) {
+            imageButton = findViewById(R.id.button0);
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openWorkout();
+                }
+            });
+        }
+    }
+
+    public void openWorkout(){
+        Intent intent = new Intent(this, workout.class);
+        startActivity(intent);
     }
 
     @Override
