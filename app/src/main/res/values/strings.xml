@@ -10,4 +10,5 @@
     <string name="day_7_button">Day 7 Button</string>
     <string name="custom_image_spinner_row">Custom Image Spinner Row</string>
     <string name="fitness_tracker_banner">Fitness Tracker Banner</string>
+    <string name="week_banner">Week Banner</string>
 </resources>

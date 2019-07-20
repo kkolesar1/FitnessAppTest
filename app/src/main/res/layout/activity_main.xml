@@ -27,7 +27,7 @@
 
     <ImageButton
         android:id="@+id/button0"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
         android:src="@drawable/day1"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
@@ -35,7 +35,7 @@
 
     <ImageButton
         android:id="@+id/button1"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
         android:src="@drawable/day2"
         app:layout_constraintTop_toBottomOf="@+id/button0"
@@ -43,15 +43,15 @@
 
     <ImageButton
         android:id="@+id/button2"
-        android:src="@drawable/day3"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
+        android:src="@drawable/day3"
         app:layout_constraintTop_toBottomOf="@+id/button1"
         android:contentDescription="@string/day_3_button" />
 
     <ImageButton
         android:id="@+id/button3"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
         android:src="@drawable/day4"
         app:layout_constraintTop_toBottomOf="@+id/button2"
@@ -59,7 +59,7 @@
 
     <ImageButton
         android:id="@+id/button4"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
         android:src="@drawable/day5"
         app:layout_constraintTop_toBottomOf="@+id/button3"
@@ -67,7 +67,7 @@
 
     <ImageButton
         android:id="@+id/button5"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
         android:src="@drawable/day6"
         app:layout_constraintTop_toBottomOf="@+id/button4"
@@ -75,7 +75,7 @@
 
     <ImageButton
         android:id="@+id/button6"
-        style="@style/banner_style"
+        style="@style/menu_button"
         tools:ignore="MissingConstraints"
         android:src="@drawable/day7"
         app:layout_constraintTop_toBottomOf="@+id/button5"

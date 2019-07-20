@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="banner_style">
+        <item name="android:layout_width">319dp</item>
+        <item name="android:layout_height">67dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="srcCompat">@drawable/banner</item>
+        <item name="android:contentDescription">@string/fitness_tracker_banner</item>
+    </style>
+</resources>
