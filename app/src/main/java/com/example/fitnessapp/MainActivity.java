@@ -19,7 +19,7 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity{
 
-    int[][][] weight; // hold the weights for each exercise on each day [week][day][exercise]
+    //int[][][] weight; // hold the weights for each exercise on each day [week][day][exercise]
     private int[] weekImages;
     private String[] weeks;
     private Spinner mSpinner;
@@ -37,38 +37,7 @@ public class MainActivity extends AppCompatActivity{
         weekImages = new int[]{R.drawable.week1, R.drawable.week2, R.drawable.week3, R.drawable.week4, R.drawable.week5, R.drawable.week6, R.drawable.week7, R.drawable.week8, R.drawable.week9, R.drawable.week10};
         weeks = new String[]{"Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10"};
 
-        //Creating save file/loading save file
-        File storageDirectory;
-        FileWriter writer;
-        String[] tempArray = new String[2];
-        storageDirectory = getFilesDir();
-        File saveData = new File(storageDirectory, "saveData.csv");
-        if(!saveData.exists()){
-            try {
-                saveData.createNewFile();
-            } catch (IOException e) {
-                Log.e("IOException", "Unable to create save file");
-            }
-        } else {
-            try (Scanner scanner = new Scanner(saveData)){
-                while (scanner.hasNextLine()){
-                    tempArray[0] = scanner.nextLine();
-                }
-            } catch (IOException e) {
-                Log.e("IOException", "Unable to create File");
-            }
-        }
 
-        // open a write path and write some random crap
-        try {
-            writer = new FileWriter(saveData);
-            writer.append(weeks[0]);
-            writer.append(weeks[0]);
-            writer.flush();
-            writer.close();
-        } catch (IOException e) {
-            Log.e("IOException", "Unable to write to File");
-        }
 
         CustomAdapter mCustomAdapter = new CustomAdapter(MainActivity.this, weekImages); // create instance of custom adapter for image spinner
         mSpinner.setAdapter(mCustomAdapter);
