@@ -33,7 +33,7 @@ public class CustomAdapter extends ArrayAdapter<String> {
             LayoutInflater mInflater= (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             try {
                 convertView = mInflater.inflate(R.layout.row, parent, false);
-                mViewHolder.mFlag = convertView.findViewById(R.id.ivFlag);
+                mViewHolder.mFlag = convertView.findViewById(R.id.weekImages);
                 convertView.setTag(mViewHolder);
             }
             catch(NullPointerException e){

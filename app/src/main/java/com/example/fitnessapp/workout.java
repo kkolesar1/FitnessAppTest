@@ -1,11 +1,20 @@
 package com.example.fitnessapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -19,17 +28,20 @@ public class workout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
+
         int workoutDay = getIntent().getIntExtra("workoutDay", 0);
         int workoutWeek = getIntent().getIntExtra("workoutWeek", 0);
         String[][][] weight = new String[10][7][]; // hold the weights for each exercise on each day [week][day][exercise]
         int[] numOfExercisesPerDay = {7, 9, 7, 8, 5, 8, 5};
         Button reset;
 
+
         final File storageDirectory;
         storageDirectory = getFilesDir();
         final File saveData = new File(storageDirectory, "saveData.csv");
         reset = findViewById(R.id.reset);
 
+        Log.i("workoutDay", "Contents of workoutDay are " + workoutDay);
         //Initialize jagged array size
         for (int i = 0; i < weight.length; i += 1){
             //Toast.makeText(workout.this, "executing loop", Toast.LENGTH_SHORT).show();
@@ -47,12 +59,18 @@ public class workout extends AppCompatActivity {
             }
         });
 
-        // Display Banner and background image
+        // Display Banner and background image based on the day
+        ImageView cl = findViewById(R.id.bgImage);
+        int currentDay = getResources().getIdentifier("day" + workoutDay + "w", "drawable", this.getPackageName());
+        Log.i("wdupdate", "Setting Background " + currentDay);
+        cl.setBackgroundResource(setBackground(workoutDay));
+
+
 
         // load saved data
         loadData(weight, saveData);
 
-        // display the workouts based on the load
+        // display the workouts based on the day and load
 
         //
 
@@ -70,6 +88,11 @@ public class workout extends AppCompatActivity {
         }
     }
 
+    private int setBackground(int day){
+        String bgImgName = "day" + (day + 1) + "w";
+        int resID = getResources().getIdentifier(bgImgName, "drawable", this.getPackageName());
+        return resID;
+    }
     private void updateArray (int week, int day, String[][][] weight, int exercise, String value){
         weight[week][day][exercise] = value;
     }
@@ -138,6 +161,12 @@ public class workout extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public int getHotspotColor (int hotspotId, int x, int y) {
+        ImageView img = findViewById (hotspotId);
+        Bitmap bitmap = Bitmap.createBitmap(img.getWidth(), img.getHeight(), Bitmap.Config.ARGB_8888);
+        return bitmap.getPixel(x, y);
     }
 }
 
