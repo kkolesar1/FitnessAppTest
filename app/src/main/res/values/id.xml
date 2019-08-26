@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="numInput1"/>
+    <item type="id" name="numInput2"/>
+    <item type="id" name="numInput3"/>
+    <item type="id" name="numInput4"/>
+    <item type="id" name="numInput5"/>
+    <item type="id" name="numInput6"/>
+    <item type="id" name="numInput7"/>
+    <item type="id" name="numInput8"/>
+    <item type="id" name="numInput9"/>
+</resources>

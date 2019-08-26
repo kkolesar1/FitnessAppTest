@@ -5,8 +5,8 @@ android {
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.example.fitnessapp"
-        minSdkVersion 29
-        targetSdkVersion 29
+        minSdkVersion 26
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
